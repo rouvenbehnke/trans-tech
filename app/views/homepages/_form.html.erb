@@ -1,4 +1,4 @@
-<%= form_for(@homepage) do |f| %>
+  <%= form_for(@homepage) do |f| %>
   <% if @homepage.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@homepage.errors.count, "error") %> prohibited this homepage from being saved:</h2>

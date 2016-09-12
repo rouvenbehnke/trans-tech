@@ -17,6 +17,8 @@ gem 'themify-icons-rails'
 gem 'flag_icon_css_rails'
 gem 'better_errors'
 gem 'pg'
+gem 'rails_12factor', group: :production
+
 
 
 
