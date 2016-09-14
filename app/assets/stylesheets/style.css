@@ -10,23 +10,40 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 /**colors**/
 .red {
-  color: #f55b63;
+  background-color: #f55b63!G;
+}
+
+.white {
+  color: white!important;
 }
 
 .green {
-  color: #bce13b;
+  background-color: #bce13b!important;
 }
 
 .blue {
-  color: #42a3ee;
+  background-color: #42a3ee!important;
 }
 
 .yellow {
-  color: #e6e837;
+  background-color: #e6e837!important;
 }
 
 .gold {
-  color: #e8c537;
+  background-color: #e8c537!important;
+}
+
+.trans-tech-blue-superlight{
+  background-color: #68727F!important;
+}
+.trans-tech-blue-light{
+  background-color: #4B5563!important;
+}
+.trans-tech-blue-dark{
+  background-color: #1D2633!important;
+}
+.trans-tech-blue-darker{
+  background-color: #121D2D!important;
 }
 
 body, html {
@@ -75,12 +92,27 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
+  color: white;
 }
 
-.h1_slider_big {
+.h1_slider_big_dark {
   display:inline;
+  background-color:#1D2633;
+}
+
+.h2_slider_big_blue {
   background-color:#323a45;
-  color:#fff;
+  padding: 5px;
+}
+
+.h2_slider_big_blue_light {
+  display: inline;
+  background-color:#4B5563;
+}
+
+.headline_slider_box {
+  background-color: rgba(104, 114, 127, 0.7);
+  padding: 5px;
 }
 
 
@@ -1065,4 +1097,59 @@ hr.separator {
   .footer .footer-bottom .list-inline li a {
     font-size: 12px;
   }
+}
+
+.left_top_panel {
+  border-radius: 45px 0px 0px 0px!important;
+}
+
+.left_bottom_panel {
+  border-radius: 0px 0px 0px 45px!important;
+}
+
+.right_top_panel {
+  border-radius: 0px 45px 0px 0px!important;
+}
+
+.right_bottom_panel {
+  border-radius: 0px 0px 45px 0px!important;
+}
+
+
+
+.panel-default {
+  min-height: 150px;
+
+}
+
+.features-background {
+  background-image: url(bg-1.jpg);
+}
+
+.panel-default .panel-heading {
+  color: #333;
+  border-color: #ddd;
+  background-color: transparent;
+  padding: 5px 15px;
+}
+
+.panel-default .panel-body {
+  color: white;
+}
+
+.panel-title {
+  color:white;
+}
+
+.no-padding-col {
+  padding: 0;
+}
+
+.services_icons{
+  font-size: 50px;
+  line-height: 2!important;
+}
+
+.full_width_section {
+  min-height: 100vh;
 }
