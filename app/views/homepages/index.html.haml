@@ -100,42 +100,8 @@
             %p
               Interpreter assignments, graphics jobs as well as all work requiring on-site presence of a translator/interpreter are calculated on an hourly basis. Please do not hesitate to use the "Request offer" form as an easy way to receive an offer for any type of translation job you may be contemplating. Or you can contact us directly via the "Team" menu. We would be very pleased to provide you with any further information that you may need.
             %a.btn.btn-lg.btn-default.btn-radius{:href => "#"} Contact Team Member
+  = render "layouts/clients_carousel"
 
-  .clients
-    .container
-      %ul.list-inline.text-center
-        %li
-          %a{:href => "#"}
-            = image_tag("cl-1.png")
-        %li
-          %a{:href => "#"}
-            = image_tag('cl-2.png')
-        %li
-          %a{:href => "#"}
-            = image_tag('cl-3.png')
-        %li
-          %a{:href => "#"}
-            = image_tag('cl-4.png')
-        %li
-          %a{:href => "#"}
-            = image_tag('cl-5.png')
-  / subscribe
-  %section#newsletter.newsletter-section
-    .container
-      .row
-        .col-sm-8.col-sm-offset-2.center-title
-          %i.icon-envelope
-          %h2 Start your free 30 days trail!
-          %p No credit card required. Upgrade, downgrade, or cancel anytime.
-      / center title row end
-      .row
-        .col-sm-6.col-sm-offset-3
-          %form.subscribe-form.assan-newsletter{:action => "#", :method => "post", :role => "form"}
-            .input-group
-              %input.form-control{:name => "email", :placeholder => "Enter email to subscribe", :type => "text"}/
-              %span.input-group-btn
-                %button.btn.btn-lg.btn-skin.btn-radius{:name => "submit", :type => "submit"} Notify me
-  / end subscribe
   / footer start
   %footer.footer
     .container
