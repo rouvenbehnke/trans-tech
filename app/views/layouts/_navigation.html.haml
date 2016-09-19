@@ -1,0 +1,52 @@
+%nav.navbar.navbar-default.header-v1.navbar-fixed-top
+  .container
+    .navbar-header.scroll-to
+      %button.navbar-toggle.collapsed{"data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "index.html"} Trans-Tech
+    #navbar.nav-push-right.navbar-collapse.collapse
+      %ul.nav.scroll-to.navbar-nav
+        %li.active
+          %a{:href => "#home"} home
+        %li
+          %a{:href => "#pricing"} pricing
+        %li
+          %a{:href => "#newsletter"} References
+        %li.dropdown.active
+          %a.dropdown-toggle.js-activated{"aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Language
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "index.html"}
+                %span.flag-icon.flag-icon-de
+                Deutsch
+            %li
+              %a{:href => "index.html"}
+                %span.flag-icon.flag-icon-gb
+                English
+            %li
+              %a{:href => "index.html"}
+                %span.flag-icon.flag-icon-it
+                Italiano
+            %li
+              %a{:href => "index.html"}
+                %span.flag-icon.flag-icon-es
+                Spanish
+            %li
+              %a{:href => "index.html"}
+                %span.flag-icon.flag-icon-dk
+                Dansk
+            %li
+              %a{:href => "index.html"}
+                %span.flag-icon.flag-icon-de
+                Deutsch
+      %ul.nav.navbar-nav.navbar-right
+        %li.button-nav
+          %a{:href => "https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P", :target => "_blank"} Work with us
+    / /.nav-collapse
+  / /.container-fluid
+/ navigation end here

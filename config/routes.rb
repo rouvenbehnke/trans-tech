@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :homepages
+  resources :homepage
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'homepages#index'
+  root 'homepage#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -54,4 +54,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # Default Scrivito routes. Adapt them to change the routing of CMS objects.
+  # See the documentation of 'scrivito_route' for a detailed description.
+  scrivito_route '/', using: 'homepage'
+  scrivito_route '(/)(*slug-):id', using: 'slug_id'
+  scrivito_route '/*permalink', using: 'permalink', format: false
 end

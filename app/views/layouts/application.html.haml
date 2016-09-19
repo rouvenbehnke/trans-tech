@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title TransTech
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+    = scrivito_head_tags
+
+  %body
+    = scrivito_body_tags
+    = render 'layouts/navigation'
+
+    = yield

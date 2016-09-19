@@ -1,4 +1,4 @@
-class HomepagesController < ApplicationController
+class HomepageController < CmsController
   before_action :set_homepage, only: [:show, :edit, :update, :destroy]
 
   # GET /homepages
