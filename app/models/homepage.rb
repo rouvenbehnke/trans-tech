@@ -7,4 +7,8 @@ class Homepage < Obj
   attribute :button_text_offer, :string
   attribute :button_text_work_with, :string
 
+  def self.default
+    Homepage.all.first
+  end
+
 end

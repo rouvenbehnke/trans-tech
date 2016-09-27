@@ -1,0 +1,8 @@
+%div{class: "quote #{widget.color}"}
+  %blockquote
+    = scrivito_tag(:p, widget, :content)
+.quote-footer.text-right
+  .quote-author-img
+    = scrivito_image_tag(widget, :image)
+  = scrivito_tag(:h4, widget, :name)
+  = scrivito_tag(:strong, widget, :job_title)

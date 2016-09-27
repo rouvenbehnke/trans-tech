@@ -1,10 +1,9 @@
 class HomepageController < CmsController
-  before_action :set_homepage, only: [:show, :edit, :update, :destroy]
 
   # GET /homepages
   # GET /homepages.json
   def index
-    @homepages = Homepage.all
+    scrivito_path(Obj.find('170866f823fb1719'))
   end
 
   # GET /homepages/1
@@ -63,9 +62,6 @@ class HomepageController < CmsController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_homepage
-      @homepage = Homepage.find(params[:id])
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def homepage_params

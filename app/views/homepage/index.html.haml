@@ -26,10 +26,7 @@
                 = scrivito_tag :span, @obj, :button_text_work_with
                 %span
                   %i.ti-user
-  %br
-  .container
-    = scrivito_tag :div, @obj, :body
-  = render "what_we_do"
+  = scrivito_tag :div, @obj, :body
   %section#pricing.pricing-section
     .container
       .row
@@ -52,6 +49,4 @@
               Interpreter assignments, graphics jobs as well as all work requiring on-site presence of a translator/interpreter are calculated on an hourly basis. Please do not hesitate to use the "Request offer" form as an easy way to receive an offer for any type of translation job you may be contemplating. Or you can contact us directly via the "Team" menu. We would be very pleased to provide you with any further information that you may need.
             %a.btn.btn-lg.btn-default.btn-radius{:href => "#"} Contact Team Member
   = render "clients_carousel"
-  = render "our_team"
-  = render "testimonials"
   = render "footer"

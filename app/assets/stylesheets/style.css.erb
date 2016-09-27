@@ -33,6 +33,10 @@
   background-color: #e8c537!important;
 }
 
+
+.trans-tech-grey{
+  background-color:#f7f7f7!important;
+}
 .trans-tech-blue-superlight{
   background-color: #68727F!important;
 }
@@ -44,6 +48,9 @@
 }
 .trans-tech-blue-darker{
   background-color: #121D2D!important;
+}
+.trans-tech-white{
+  background-color: white!important;
 }
 
 body, html {
@@ -93,6 +100,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: white;
+}
+
+h3.h1 {
+  font-size: 75px;
+  color:black;
 }
 
 .h1_slider_big_dark {
@@ -1233,19 +1245,90 @@ hr.separator {
   font-style: italic;
   font-size: 14px; }
 
+/*******section heading**********/
+.center-heading {
+  text-align: center;
+  margin-bottom: 40px; }
+
+.center-heading h2 .black {
+  color: black;
+}
+
+.center-heading h2 {
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  font-size: 25px; }
+
+.center-heading p {
+  font-size: 20px;
+  line-height: 35px; }
+
+.center-heading h2 strong {
+  font-weight: 700; }
+
+.center-line {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  border-top: 1px solid #bbb;
+  /* border-bottom: 1px solid $skincolor; */
+  margin: auto; }
+
+.center-heading p {
+  margin-top: 10px; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+/************************home events**********************/
+.events-bg {
+  background: url(../img/showcase-1.jpg);
+  padding: 150px 0; }
+
+.events-bg h2 {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700; }
+
+.events-bg h4 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 400; }
+
+.event-digit-box h1 {
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 25px; }
+
+.event-digit-box h4 {
+  color: #000;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.event-speakers {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: #f7f7f7; }
+
 /************custom css here*****/
 
 .panel-default {
-  min-height: 150px;
+min-height: 150px;
 }
 
 .features-background {
-  background-image: url(<%= asset_path 'bg-1.jpg' %>);
+background-image: url(<%= asset_path 'bg-1.jpg' %>);
 
 }
 
 .panel-default .panel-heading {
-  color: #333;
+color: #333;
   border-color: #ddd;
   background-color: transparent;
   padding: 5px 15px;
@@ -1270,4 +1353,19 @@ hr.separator {
 
 .full_width_section {
   min-height: 100vh;
+}
+
+.text-right h4 {
+  color: black;
+}
+
+.divide30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f7f7f7;
+}
+
+.counter-right {
+  margin-top: 150px;
+  text-align: center;
 }

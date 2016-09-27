@@ -1,0 +1,2 @@
+class OurServicesWidget < Widget
+end
