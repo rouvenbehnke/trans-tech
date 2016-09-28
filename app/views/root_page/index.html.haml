@@ -1,0 +1,9 @@
+= "select homepage"
+= form_tag(scrivito_path(@obj), method: :post) do
+  - if flash[:error]
+    .alert.alert-danger= flash[:error]
+  .form-group
+    = select_tag 'homepage', options_for_select(@homepages.collect {|h| [h.id, h.title]}), class: "form-control select2form"
+  .checkbox.pull-left
+  %label
+  = submit_tag "Go to Homepage"

@@ -9,41 +9,23 @@
       %a.navbar-brand{:href => "index.html"} Trans-Tech
     #navbar.nav-push-right.navbar-collapse.collapse
       %ul.nav.scroll-to.navbar-nav
-        %li.active
-          %a{:href => "#home"} home
         %li
-          %a{:href => "#pricing"} pricing
-        %li
-          %a{:href => "#newsletter"} References
+          %a{href: "#home"}
+            Home
+        - @obj.nav_based_on_widgets.each do |section|
+          %li
+            = link_to(section.section_name.humanize, "#" + section.section_name)
+
         %li.dropdown.active
           %a.dropdown-toggle.js-activated{"aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             Language
             %span.caret
           %ul.dropdown-menu
-            %li
-              %a{:href => "index.html"}
-                %span.flag-icon.flag-icon-de
-                Deutsch
-            %li
-              %a{:href => "index.html"}
-                %span.flag-icon.flag-icon-gb
-                English
-            %li
-              %a{:href => "index.html"}
-                %span.flag-icon.flag-icon-it
-                Italiano
-            %li
-              %a{:href => "index.html"}
-                %span.flag-icon.flag-icon-es
-                Spanish
-            %li
-              %a{:href => "index.html"}
-                %span.flag-icon.flag-icon-dk
-                Dansk
-            %li
-              %a{:href => "index.html"}
-                %span.flag-icon.flag-icon-de
-                Deutsch
+            - @obj.homepages.each do |homepage|
+              %li
+                %a{:href => scrivito_path(homepage)}
+                  = image_tag("flags/" + homepage.country, class: "flag-icon")
+                  = homepage.country_name_translation
       %ul.nav.navbar-nav.navbar-right
         %li.button-nav
           %a{:href => "https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P", :target => "_blank"} Work with us

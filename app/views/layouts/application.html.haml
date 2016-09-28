@@ -9,6 +9,7 @@
 
   %body
     = scrivito_body_tags
-    = render 'layouts/navigation'
+    - unless @root_page 
+      = render 'layouts/navigation'
 
     = yield

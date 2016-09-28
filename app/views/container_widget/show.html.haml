@@ -1,3 +1,4 @@
-%div{class: "row #{widget.color}"}
-  %div{class: "container divide30 #{widget.color}"}
-    = scrivito_tag(:div, widget, :widgets)
+= content_tag :section, id: widget.section_name do
+  %div{class: "row #{widget.color}"}
+    %div{class: "container divide30 #{widget.color}"}
+      = scrivito_tag(:div, widget, :widgets)
