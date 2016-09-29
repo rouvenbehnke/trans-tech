@@ -1,0 +1,9 @@
+.container
+  = form_tag session_path, role: 'form' do
+    .form-group
+      = label_tag :login, 'Login'
+      = text_field_tag :login, '', class: 'form-control', placeholder: 'Enter login'
+    .form-group
+      = label_tag :password, 'Password'
+      = password_field_tag :password, '', class: 'form-control', placeholder: 'Enter password'
+    %button.btn.btn-default{:type => "submit"} Log in

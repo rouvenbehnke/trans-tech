@@ -7,5 +7,4 @@ class CmsController < ApplicationController
     @obj ||= params[:id].present? ? Obj.find(params[:id]) : RootPage.all.first
   end
 
-
 end

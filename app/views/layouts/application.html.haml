@@ -9,7 +9,7 @@
 
   %body
     = scrivito_body_tags
-    - unless @root_page 
+    - unless @root_page == true || @obj.class == LoginPage
       = render 'layouts/navigation'
 
     = yield
