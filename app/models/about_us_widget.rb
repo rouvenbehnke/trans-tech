@@ -4,6 +4,9 @@ class AboutUsWidget < Widget
   attribute :job_description, :string
   attribute :description, :string
   attribute :headline, :string
+  attribute :mail, :string
+  attribute :fax, :string
+  attribute :phone, :string
 
 
   def description_for_editor

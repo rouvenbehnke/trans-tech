@@ -2,57 +2,30 @@
   .container
     .row
       .col-sm-4.margin-b-30
-        %h2 Assan
-        %p
-          Over 2500+ happy customers since December 2014.We've create the classic, simple & fully featured Templates kit. In author language ASSAN means simple and easy to learn and use.
-        .space-20
-        %a.btn.btn-skin.btn-radius.btn-lg{:href => "https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P", :target => "_blank"} Get Assan Kit Today!
+        = scrivito_tag(:h2, @obj, :trans_tech_text_headline)
+        = scrivito_tag(:p, @obj, :trans_tech_text)
       .col-sm-4.margin-b-30
-        %h2 Contact us
-        %ul.list-unstyled.clearfix
-          %li.clearfix
-            %i.fa.fa-map-marker
-            %span 124, Munna wali, Lalchandpura, Johtwara, 302012
-          %li.clearfix
-            %i.fa.fa-envelope-o
+        = scrivito_tag(:h2, @obj, :contact_us_text)
+
+        %ul.nopadding
+          %li
             %span
-              %a{:href => "#"} mylifedesign143@gmail.com
-          %li.clearfix
-            %i.fa.fa-phone
-            %span +01 1234 434-345
-      / col4 end
+              %i.ti-map-alt
+              12205, Berlin, Carstennstraße.43b
+          %li
+            %span
+              %i.ti-email
+              = mail_to "info@trans-tech.de"
+          %li
+            %span
+              %i.ti-headphone-alt
+              +49 30 8173840
       .col-sm-4.margin-b-30
-        %h2 Follow us
-        %ul.list-inline.clearfix
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-facebook-official
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-twitter
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-google-plus
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-linkedin
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-youtube
-      / col4 end
-    / row end
-    .row
-      .col-sm-12.text-center
-        .footer-bottom
-          %ul.list-inline
-            %li
-              %a{:href => "#"} Home
-            %li
-              %a{:href => "#"} News
-            %li
-              %a{:href => "#"} Help
-            %li
-              %a{:href => "#"} Terms
-            %li
-              %a{:href => "#"} Privacy
-          %span © Copyright 2016. Orginal Design by Design_mylife
+        = scrivito_tag(:h2, @obj, :rights_links)
+        / col4 end
+      / row end
+      .row
+        .col-sm-12.text-center
+          .footer-bottom
+            %ul.list-inline
+            %span © 1990 - 2016 Werner Behnke | All rights reserved.
