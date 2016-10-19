@@ -21,7 +21,11 @@
               %i.ti-headphone-alt
               +49 30 8173840
       .col-sm-4.margin-b-30
-        = scrivito_tag(:h2, @obj, :rights_links)
+        = scrivito_tag_list(:ul, @obj, :toclist) do |list, child|
+          = list.tag(:li, class: "my_list_element") do
+            = link_to(scrivito_path(child)) do
+              = scrivito_tag(:span, child, :title)
+
         / col4 end
       / row end
       .row

@@ -14,7 +14,10 @@
             Home
         - @obj.nav_based_on_widgets.each do |section|
           %li
-            = link_to(section.section_name.humanize, "#" + section.section_name)
+            - if @obj.is_a?(Homepage)
+              = link_to(section.section_name.humanize, "#" + section.section_name)
+            - if @obj.is_a?(Page)
+              = link_to(section.section_name.humanize, "#{scrivito_path(@obj.parent)}##{section.section_name}")
 
         %li.dropdown.active
           %a.dropdown-toggle.js-activated{"aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
@@ -27,9 +30,3 @@
                   = image_tag asset_path("flags/" + homepage.country + ".png"), class: "flag-icon"
                   -# = image_tag image_path("flags/" + homepage.country), class: "flag-icon"
                   = homepage.country_name_translation
-      %ul.nav.navbar-nav.navbar-right
-        %li.button-nav
-          %a{:href => "https://wrapbootstrap.com/theme/assan-multi-purpose-8-themes-in-1-WB05F069P", :target => "_blank"} Work with us
-    / /.nav-collapse
-  / /.container-fluid
-/ navigation end here

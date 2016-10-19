@@ -45,6 +45,12 @@ class Homepage < Obj
     self[:country] || "Germany"
   end
 
+  def homepage
+    @homepage ||= ancestors.detect do |ancestor|
+      ancestor.is_a?(Homepage)
+    end.presence || Homepage.default
+  end
+
   def nav_based_on_widgets
     container_and_services_widgets = self[:body].select{|widget| allowed_widget_classes_for_nav.include?(widget.class)}
     container_and_services_widgets.reject{|widget| widget.include_in_nav == "nein"}
