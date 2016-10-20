@@ -1,0 +1,23 @@
+.pricing-simple.popular
+  = scrivito_tag(:span, widget, :flag, class: "ribbon")
+  = scrivito_tag(:h4, widget, :title)
+  %h3
+    = scrivito_tag(:span, widget, :main)
+    %sub
+      = scrivito_tag(:span, widget, :sub_main)
+  %ul.list-unstyled
+    %li
+      %span
+      %i.ti-eye
+      = scrivito_tag(:span, widget, :first_li)
+    %li
+      %span
+      %i.ti-comments
+      = scrivito_tag(:span, widget, :second_li)
+    %li
+      %span
+      %i.ti-alarm-clock
+      = scrivito_tag(:span, widget, :third_li)
+  .bottom
+    .btn.btn-lg.trans-tech-blue-darker
+      = scrivito_tag(:div, widget, :link_text)

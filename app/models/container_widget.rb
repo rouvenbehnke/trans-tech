@@ -1,6 +1,6 @@
 class ContainerWidget < Widget
   attribute :widgets, :widgetlist
-  attribute :color, :enum, values: ["white", "grey", "very_light", "light", "dark", "very dark"]
+  attribute :color, :enum, values: ["white", "grey", "very_light", "light", "dark", "very dark"], default: "grey"
   attribute :section_name, :string
   attribute :include_in_nav, :enum, values: ["ja", "nein"], default: "ja"
 

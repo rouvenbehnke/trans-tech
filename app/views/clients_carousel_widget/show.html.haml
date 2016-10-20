@@ -1,0 +1,6 @@
+%section#clients-carousel
+  #clients-slider
+    - widget.images.each do |image|
+      .item
+        = image_tag(scrivito_path(image.obj)) do
+          = link_to(scrivito_path(image.title))

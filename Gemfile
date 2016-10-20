@@ -19,6 +19,7 @@ gem 'better_errors'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'scrivito'
+gem 'pry-rails'
 
 # Scrivito Gems
 gem 'scrivito_two_column_widget'

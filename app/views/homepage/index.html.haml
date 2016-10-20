@@ -27,26 +27,4 @@
                 %span
                   %i.ti-user
   = scrivito_tag :div, @obj, :body
-  %section#pricing.pricing-section
-    .container
-      .row
-        .col-sm-12.center-title
-          %i.icon-pricetags
-          %h2 Our Prices
-      / center title row end
-      .row
-        .col-sm-6
-          .price-box.text-center.wow.animated.fadeInUp{"data-wow-delay" => "0.1s"}
-            %i.icon-phone
-            %h3 Per Line
-            %p Our prices are calculated on a per line (one standard line corresponds to 55 key strokes including spaces) or a per word basis, whereby the overall volume of the text and the complexity of the subject are significant factors determining the total price.
-            %a.btn.btn-lg.btn-default.btn-radius{:href => "#"} Request offer
-        .col-sm-6
-          .price-box.text-center.wow.animated.fadeInUp{"data-wow-delay" => "0.1s"}
-            %i.icon-phone
-            %h3 Graphics Jobs
-            %p
-              Interpreter assignments, graphics jobs as well as all work requiring on-site presence of a translator/interpreter are calculated on an hourly basis. Please do not hesitate to use the "Request offer" form as an easy way to receive an offer for any type of translation job you may be contemplating. Or you can contact us directly via the "Team" menu. We would be very pleased to provide you with any further information that you may need.
-            %a.btn.btn-lg.btn-default.btn-radius{:href => "#"} Contact Team Member
-  = render "clients_carousel"
   = render "footer"

@@ -23,6 +23,7 @@ class Homepage < Obj
   attribute :rights_links, :referencelist
   attribute :trans_tech_text_headline, :string, default: "trans-tech"
   attribute :trans_tech_text, :string, default: "Over 2500+ happy customers since December 1996. We are looking forward to your project and hope to hear from you soon."
+  attribute :more_sites, :string, default: "More sites"
 
 
   def self.default
