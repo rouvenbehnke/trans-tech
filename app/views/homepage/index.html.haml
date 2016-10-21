@@ -1,30 +1,28 @@
-%body{"data-spy" => "scroll"}
-  / Static navbar
-  %section#home.banner-intro.banner-slider.full_width_section
-    .banner-inner
-      .container
-        .row
-          .col-sm-12.text-center.wow.animated.bounceIn
-            = scrivito_tag :h1, @obj, :universal, class: "h1_slider_big_dark"
+%section#home.banner-intro.banner-slider.full_width_section
+  .banner-inner
+    .container
+      .row
+        .col-sm-12.text-center.wow.animated.bounceIn
+          = scrivito_tag :h1, @obj, :universal, class: "h1_slider_big_dark"
+          %br
+          %br
+            = scrivito_tag :h3, @obj, :first_sub_headline, class: "h2_slider_big_blue_light"
             %br
-            %br
-              = scrivito_tag :h3, @obj, :first_sub_headline, class: "h2_slider_big_blue_light"
-              %br
-                = scrivito_tag :h3, @obj, :second_sub_headline, class: "h1_slider_big_dark"
+              = scrivito_tag :h3, @obj, :second_sub_headline, class: "h1_slider_big_dark"
 
-            .scroll-to.banner-buttons
-              %a.btn.btn-lg.btn-skin.btn-radius{:href => "##{@obj.button_1}"}
-                = scrivito_tag :span, @obj, :button_text_service
-                %span
-                  %i.ti-help
+          .scroll-to.banner-buttons
+            %a.btn.btn-lg.btn-skin.btn-radius{:href => "##{@obj.button_1}"}
+              = scrivito_tag :span, @obj, :button_text_service
+              %span
+                %i.ti-help
 
-              %a.btn.btn-lg.btn-radius.btn-white{:href => "##{@obj.button_2}"}
-                = scrivito_tag :span, @obj, :button_text_offer
-                %span
-                  %i.ti-settings
-              %a.btn.btn-lg.btn-radius.btn-skin{:href => "##{@obj.button_3}"}
-                = scrivito_tag :span, @obj, :button_text_work_with
-                %span
-                  %i.ti-user
-  = scrivito_tag :div, @obj, :body
-  = render "footer"
+            %a.btn.btn-lg.btn-radius.btn-white{:href => "##{@obj.button_2}"}
+              = scrivito_tag :span, @obj, :button_text_offer
+              %span
+                %i.ti-settings
+            %a.btn.btn-lg.btn-radius.btn-skin{:href => "##{@obj.button_3}"}
+              = scrivito_tag :span, @obj, :button_text_work_with
+              %span
+                %i.ti-user
+= scrivito_tag :div, @obj, :body
+= render "footer"

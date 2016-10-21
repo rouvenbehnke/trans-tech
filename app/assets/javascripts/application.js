@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require scrivito
 //= require_self
 //= require_tree .
 //= require_tree ./loadlater
-//= require scrivito
