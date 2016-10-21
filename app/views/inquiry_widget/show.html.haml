@@ -1,9 +1,10 @@
 .container
   .tabs-container
+    = "Please select your type of request"
     %ul.nav.nav-tabs
       %li
         %a{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab-1"} You got work for us?
-      %li.active
+      %li
         %a{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab-2"} You want to work for us?
   .tab-content
     #tab-1.tab-pane

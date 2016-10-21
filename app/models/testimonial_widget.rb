@@ -5,6 +5,7 @@ class TestimonialWidget < Widget
   attribute :name, :string
   attribute :job_title, :string
   attribute :color, :enum, values: ["very_light", "light", "dark", "dark"]
+  attribute :pdf, :reference
 
   def color
     case self[:color]
