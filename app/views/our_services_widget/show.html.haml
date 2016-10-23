@@ -17,11 +17,11 @@
 
               #collapseone.panel-collapse.collapse
                 .panel-body
-                  = scrivito_tag(:div, widget, :cell_content_2)
+                  = scrivito_tag(:div, widget, :cell_content_1)
 
                   .divide30
                   %p
-                    %a.btn.btn-theme-bg{:href => "#"} Apply Now
+                    %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
             / panel end
             .panel.panel-default.trans-tech-blue-darker
               .panel-heading
@@ -34,7 +34,7 @@
 
               #collapsetwo.panel-collapse.collapse
                 .panel-body
-                  = scrivito_tag(:div, widget, :cell_content_3)
+                  = scrivito_tag(:div, widget, :cell_content_2)
                   .divide30
                   %p
                     %a.btn.btn-theme-bg{:href => "#"} Apply Now
@@ -313,7 +313,6 @@
 
               #collapsetwenty.panel-collapse.collapse
                 .panel-body
-                  = scrivito_tag(:div, widget, :cell_content_20)
                   .divide30
                   %p
                     %a.btn.btn-theme-bg{:href => "#"} Apply Now

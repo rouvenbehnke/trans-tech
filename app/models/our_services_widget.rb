@@ -1,6 +1,9 @@
 class OurServicesWidget < Widget
   attribute :section_name, :string
   attribute :include_in_nav, :enum, values: ["ja", "nein"], default: "ja"
+  attribute :title_to_link, :string, default: "request quote"
+  attribute :link_target, :string, default: "inquiry"
+
   attribute :cell_title_1, :string
   attribute :cell_title_2, :string
   attribute :cell_title_3, :string
