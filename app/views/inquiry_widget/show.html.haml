@@ -3,9 +3,9 @@
     = "Please select your type of request"
     %ul.nav.nav-tabs
       %li
-        %a{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab-1"} You got work for us?
+        %a{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab-1"} #{widget.inquiry_button_text}
       %li
-        %a{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab-2"} You want to work for us?
+        %a{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab-2"} #{widget.work_for_us_button_text}
   .tab-content
     #tab-1.tab-pane
       .row
@@ -29,7 +29,7 @@
           = scrivito_tag(:p, widget, :inquiry_text)
         #success
           .form-group.col-xs-12
-            %button.btn.btn-skin.btn-lg{:type => "submit"} Send Message
+            %button.btn.btn-skin.btn-lg{:type => "submit"} #{widget.send_button_text}
     #tab-2.tab-pane.active
       .row
         .col-md-6
@@ -52,4 +52,4 @@
           = scrivito_tag(:p, widget, :work_for_us_text)
         #success
           .form-group.col-xs-12
-            %button.btn.btn-skin.btn-lg{:type => "submit"} Send Message
+            %button.btn.btn-skin.btn-lg{:type => "submit"} #{widget.send_button_text}
