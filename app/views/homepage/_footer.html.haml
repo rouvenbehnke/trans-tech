@@ -11,7 +11,8 @@
           %li
             %span
               %i.ti-map-alt
-              12205, Berlin, Carstennstraße.43b
+              = scrivito_tag(:span, @obj, :adress)
+
           %li
             %span
               %i.ti-email
@@ -23,7 +24,7 @@
       .col-sm-4.margin-b-30
 
         %h2
-          = "More Sites"
+          = scrivito_tag(:div, @obj, :more_sites)
         = scrivito_tag_list(:ul, @obj, :toclist, class: "nopadding") do |list, child|
           = list.tag(:li, class: "my_list_element") do
             = link_to(scrivito_path(child)) do
