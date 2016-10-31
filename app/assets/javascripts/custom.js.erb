@@ -1,7 +1,5 @@
 $(document).ready(function () {
- $(window).scroll(function(){
-    $(".banner-inner, .newsletter-home-text").css("opacity", 1 - $(window).scrollTop() / 350);
-  });
+ //sticky header on scroll
 //parallax
     if (!Modernizr.touch) {
         $('.home-newsletter').parallax("50%", 0.5);
@@ -9,7 +7,7 @@ $(document).ready(function () {
     }
     //backstretch background slideshow using for banner intro
     $('.banner-slider').backstretch([
-        "<%= asset_path 'silhouette.png' %>",
+        "<%= asset_path 'slider_top.png' %>",
     ], {
         fade: 750,
         duration: 3000

@@ -1,20 +1,21 @@
 .team-wrap
   = scrivito_image_tag widget, :image
-  %h4.black
-    = scrivito_tag(:div, widget, :name)
-  %span
-    = scrivito_tag(:div, widget, :job_description)
+  .text
+    %h4.black
+      = scrivito_tag(:div, widget, :name)
+    %span
+      = scrivito_tag(:div, widget, :job_description)
 
-  %ul
-    %li
-      %span
-        %i.ti-email
-        = scrivito_tag(:p, widget, :mail)
-    %li
-      %span
-        %i.ti-headphone-alt
-        = scrivito_tag(:p, widget, :phone)
-    %li
-      %span
-        %i.ti-harddrives
-        = scrivito_tag(:p, widget, :fax)
+    %ul
+      %li
+        %span
+          %i.ti-email
+          = scrivito_tag(:p, widget, :mail)
+      %li
+        %span
+          %i.ti-headphone-alt
+          = scrivito_tag(:p, widget, :phone)
+      %li
+        %span
+          %i.ti-harddrives
+          = scrivito_tag(:p, widget, :fax)
