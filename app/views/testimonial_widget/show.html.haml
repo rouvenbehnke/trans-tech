@@ -1,7 +1,15 @@
 %div{class: "quote #{widget.color}"}
-  %blockquote
-    = scrivito_tag(:p, widget, :content)
-  = "bla"
+  - if widget.pdf.present?
+    %blockquote
+      .pdf-present
+        = scrivito_tag(:p, widget, :content)
+        = link_to scrivito_path(widget.pdf) do
+          .ti-save.testimonial-icon
+  - else
+    %blockquote
+      = scrivito_tag(:p, widget, :content)
+
+
 .quote-footer.text-right
   .quote-author-img
     = scrivito_image_tag(widget, :image)
