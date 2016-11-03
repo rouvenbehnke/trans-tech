@@ -1,6 +1,6 @@
 = content_tag :section, id: widget.section_name, class: "features-background" do
 
-  .center-title
+  .center-title.center-title-padding
     %h2.white
       Our Services
     .row.jobs-row
@@ -248,7 +248,7 @@
                   %br
                   %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapsefifteen"}
                     = scrivito_tag(:div, widget, :cell_title_15)
-              #collapsesix.panel-collapse.collapse
+              #collapsefifteen.panel-collapse.collapse
                 .panel-body
                   = scrivito_tag(:div, widget, :cell_content_15)
                   .divide30
