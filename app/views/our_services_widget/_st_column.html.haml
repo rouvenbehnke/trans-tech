@@ -1,0 +1,76 @@
+.left_top_panel.panel.panel-default.trans-tech-blue-darker
+  .panel-heading
+    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseone"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/aerospace.png", class: "whitey")
+        = scrivito_tag(:div, widget, :cell_title_1)
+
+  #collapseone.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_1)
+
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+/ panel end
+.panel.panel-default.trans-tech-blue-darker
+  .panel-heading
+    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapsetwo"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/architecture.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_2)
+
+
+  #collapsetwo.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_2)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+/ panel end
+.panel.panel-default.trans-tech-blue-darker
+  .panel-heading
+    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapsethree"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/automotive.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_3)
+
+
+  #collapsethree.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_3)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+.panel.panel-default.trans-tech-blue-darker
+  .panel-heading
+    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapsefour"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/chemistry.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_4)
+
+
+  #collapsefour.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_4)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+
+.left_bottom_panel.panel.panel-default.trans-tech-blue-darker
+  .panel-heading
+    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapsefive"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/environmental.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_5)
+  #collapsefive.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_5)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}

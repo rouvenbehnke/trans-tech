@@ -1,0 +1,75 @@
+.right_top_panel.panel.panel-default.trans-tech-blue-superlight
+  .panel-heading
+    %a{"data-parent" => "#accordion4", "data-toggle" => "collapse", :href => "#collapsesixteen"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/business.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_16)
+
+  #collapsesixteen.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_title_16)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+/ panel end
+.panel.panel-default.trans-tech-blue-superlight
+  .panel-heading
+    %a{"data-parent" => "#accordion4", "data-toggle" => "collapse", :href => "#collapseseventeen"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/film.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_17)
+
+  #collapseseventeen.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_17)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+/ panel end
+.panel.panel-default.trans-tech-blue-superlight
+  .panel-heading
+    %a{"data-parent" => "#accordion4", "data-toggle" => "collapse", :href => "#collapseeighteen"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/energy.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_18)
+
+  #collapseeighteen.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_18)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+
+.panel.panel-default.trans-tech-blue-superlight
+  .panel-heading
+    %a{"data-parent" => "#accordion4", "data-toggle" => "collapse", :href => "#collapsenineteen"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/industrial.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_19)
+
+  #collapsenineteen.panel-collapse.collapse
+    .panel-body
+      = scrivito_tag(:div, widget, :cell_content_19)
+      .divide30
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+
+.right_bottom_panel.panel.panel-default.trans-tech-blue-superlight
+  .panel-heading
+    %a{"data-parent" => "#accordion4", "data-toggle" => "collapse", :href => "#collapsetwenty"}
+      %h4.panel-title
+        %span
+          = image_tag("icons/web.png", class: "whitey")
+          = scrivito_tag(:div, widget, :cell_title_20)
+
+
+  #collapsetwenty.panel-collapse.collapse
+    .panel-body
+      .divide30
+        = scrivito_tag(:div, widget, :cell_content_20)
+      %p
+        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
