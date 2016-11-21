@@ -6,8 +6,10 @@ $(document).ready(function () {
            $('.home-contact').parallax("50%", 0.5);
     }
     //backstretch background slideshow using for banner intro
+    var image = $('#home').data('slider-image')
+    debugger
     $('.banner-slider').backstretch([
-        "<%= asset_path 'slider_top.png' %>",
+      image,
     ], {
         fade: 750,
         duration: 3000

@@ -16,6 +16,7 @@ class Homepage < Obj
   attribute :button_text_service, :string
   attribute :button_text_offer, :string
   attribute :button_text_work_with, :string
+  attribute :slider_image, :reference
 
   #footer
   attribute :contact_us_text, :string, default: "Contact Us"
