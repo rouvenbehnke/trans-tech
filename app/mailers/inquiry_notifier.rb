@@ -15,7 +15,7 @@ class InquiryNotifier < ApplicationMailer
 
   def info_to_trans_tech_mail(inquiry)
     @inquiry = inquiry
-    mail(to: @inquiry.email,
+    mail(to: "rouven.behnke@infopark.de",
          subject: 'Neue Anfrage von Trans-Tech erhalten.')
   end
 end
