@@ -1,4 +1,4 @@
-= scrivito_medium_dialog do
+= scrivito_large_dialog do
   = scrivito_details_for "Inquiry Text" do
     = scrivito_tag :div, widget, :inquiry_text
   = scrivito_details_for "Inquiry Button Text" do
@@ -9,3 +9,24 @@
     = scrivito_tag :div, widget, :work_for_us_button_text
   = scrivito_details_for "Submit Button Text" do
     = scrivito_tag :div, widget, :send_button_text
+
+  %h3
+    = "Formular Placeholder:"
+  = scrivito_details_for "First Name" do
+    = scrivito_tag :div, widget, :first_name
+  = scrivito_details_for "Last Name" do
+    = scrivito_tag :div, widget, :last_name
+  = scrivito_details_for "Email Adresse" do
+    = scrivito_tag :div, widget, :email
+  = scrivito_details_for "Subject" do
+    = scrivito_tag :div, widget, :subject
+  = scrivito_details_for "Volume" do
+    = scrivito_tag :div, widget, :volume
+  = scrivito_details_for "Source Language" do
+    = scrivito_tag :div, widget, :source_language
+  = scrivito_details_for "Target Language" do
+    = scrivito_tag :div, widget, :target_language
+  = scrivito_details_for "Specialist Areas" do
+    = scrivito_tag :div, widget, :specialist_areas
+  = scrivito_details_for "Further Information" do
+    = scrivito_tag :div, widget, :remarks

@@ -1,4 +1,5 @@
-= content_tag :section, id: widget.section_name do
+= content_tag :section do
+  %a.anchor{id: widget.section_name}
   %div{class: "row #{widget.color}"}
     %div{class: "container container_padding #{widget.color} wow animated fadeInLeft animated"}
       = scrivito_tag(:div, widget, :widgets)

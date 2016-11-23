@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get '/login' => "login_page#redirect"
 
+  resources :inquiry_forms, only: [:create]
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
