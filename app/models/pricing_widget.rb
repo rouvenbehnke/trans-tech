@@ -6,6 +6,7 @@ class PricingWidget < Widget
   attribute :second_li, :string
   attribute :third_li, :string
   attribute :link_text, :string
+  attribute :link, :string
   attribute :flag, :string
 
   def description_for_editor

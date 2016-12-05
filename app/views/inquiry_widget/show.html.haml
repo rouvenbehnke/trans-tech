@@ -4,9 +4,9 @@
   = scrivito_tag(:p, widget, :request_type)
   %ul.nav.nav-tabs
     %li
-      %a{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab-1"} #{widget.inquiry_button_text}
+      %a#inquiry-button{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab-1"} #{widget.inquiry_button_text}
     %li
-      %a{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab-2"} #{widget.work_for_us_button_text}
+      %a#work-for-us-button{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab-2"} #{widget.work_for_us_button_text}
 .tab-content
   #tab-1.tab-pane
     .col-md-6.no-padding-col

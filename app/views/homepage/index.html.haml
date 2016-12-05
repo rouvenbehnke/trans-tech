@@ -1,27 +1,28 @@
-%section#home.banner-intro.banner-slider.full_width_section{data: {slider_image: "#{scrivito_path(@obj.slider_image)}"}}
-  .banner-inner
-    .container
-      .row
-        .col-sm-12.text-center.wow.animated.bounceIn.slider-view
-          = scrivito_tag :h1, @obj, :universal, class: "h1_slider_big_dark"
-          %br
-          %br
-            = scrivito_tag :h3, @obj, :first_sub_headline, class: "h2_slider_big_blue_light"
-            -# %br
-            -#   = scrivito_tag :h3, @obj, :second_sub_headline, class: "h1_slider_big_dark"
+- if @obj.slider_image.present?
+  %section#home.banner-intro.banner-slider.full_width_section{data: {slider_image: "#{scrivito_path(@obj.slider_image)}"}}
+    .banner-inner
+      .container
+        .row
+          .col-sm-12.text-center.wow.animated.bounceIn.slider-view
+            = scrivito_tag :h1, @obj, :universal, class: "h1_slider_big_dark"
+            %br
+            %br
+              = scrivito_tag :h3, @obj, :first_sub_headline, class: "h2_slider_big_blue_light"
+              -# %br
+              -#   = scrivito_tag :h3, @obj, :second_sub_headline, class: "h1_slider_big_dark"
 
-          %a.btn.btn-lg.btn-skin.btn-radius.trans-tech-blue-dark{:href => "##{@obj.button_1}"}
-            = scrivito_tag :span, @obj, :button_text_service
-            %span
-              %i.ti-help
+            %a.btn.btn-lg.btn-skin.btn-radius.trans-tech-blue-dark{:href => "##{@obj.button_1}"}
+              = scrivito_tag :span, @obj, :button_text_service
+              %span
+                %i.ti-help
 
-          %a.btn.btn-lg.btn-skin.btn-radius.trans-tech-blue-dark{:href => "##{@obj.button_2}"}
-            = scrivito_tag :span, @obj, :button_text_offer
-            %span
-              %i.ti-settings
-          %a.btn.btn-lg.btn-skin.btn-radius.trans-tech-blue-dark{:href => "##{@obj.button_3}"}
-            = scrivito_tag :span, @obj, :button_text_work_with
-            %span
-              %i.ti-user
+            %a#offer-trigger.btn.btn-lg.btn-skin.btn-radius.trans-tech-blue-dark{:href => "##{@obj.button_2}"}
+              = scrivito_tag :span, @obj, :button_text_offer
+              %span
+                %i.ti-settings
+            %a#work-with-us-trigger.btn.btn-lg.btn-skin.btn-radius.trans-tech-blue-dark{:href => "##{@obj.button_3}"}
+              = scrivito_tag :span, @obj, :button_text_work_with
+              %span
+                %i.ti-user
 = scrivito_tag :div, @obj, :body
 = render "footer"
