@@ -12,7 +12,7 @@
       = scrivito_tag(:div, widget, :cell_content_6)
       .divide30
       %p
-        %a.btn.btn-theme-bg{:href => "#"} Apply Now
+        %a#offer-trigger-pricing.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
 
 / panel end
 .panel.panel-default.trans-tech-blue-dark
@@ -29,7 +29,7 @@
       = scrivito_tag(:div, widget, :cell_content_7)
       .divide30
       %p
-        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+        %a#offer-trigger-pricing.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
 / panel end
 .panel.panel-default.trans-tech-blue-dark
   .panel-heading
@@ -44,7 +44,7 @@
       = scrivito_tag(:div, widget, :cell_content_8)
       .divide30
       %p
-        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+        %a#offer-trigger-pricing.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
 
 .panel.panel-default.trans-tech-blue-dark
   .panel-heading
@@ -59,7 +59,7 @@
       = scrivito_tag(:div, widget, :cell_content_9)
       .divide30
       %p
-        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+        %a#offer-trigger-pricing.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
 .panel.panel-default.trans-tech-blue-dark
   .panel-heading
     %a{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseten"}
@@ -73,4 +73,4 @@
       = scrivito_tag(:div, widget, :cell_content_10)
       .divide30
       %p
-        %a.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
+        %a#offer-trigger-pricing.btn.btn-theme-bg{:href => scrivito_path(@obj) + "##{widget.link_target}"} #{widget.title_to_link}
