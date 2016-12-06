@@ -14,4 +14,7 @@ class Obj < Scrivito::BasicObj
     Dir.glob("#{Rails.root}/app/assets/images/flags/*.png")
   end
 
+  def slug
+    self.title.parameterize
+  end
 end
