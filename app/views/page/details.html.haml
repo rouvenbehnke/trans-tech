@@ -1,0 +1,10 @@
+= scrivito_medium_dialog do
+  = scrivito_details_for "Title" do
+    = scrivito_tag :div, @obj, :title
+
+  = scrivito_details_for "Language of Site please use iso codes" do
+    = scrivito_tag :div, @obj, :iso_code_language
+  = scrivito_details_for "Comma seperated words describing the Page" do
+    = scrivito_tag :div, @obj, :meta_tags
+  = scrivito_details_for "Complete sentencens describing the Page" do
+    = scrivito_tag :div, @obj, :meta_description

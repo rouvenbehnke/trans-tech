@@ -11,3 +11,12 @@
     = scrivito_tag :div, @obj, :button_2
   = scrivito_details_for "Third Button of Introduction Image" do
     = scrivito_tag :div, @obj, :button_3
+
+  %h3
+    = "Seo-Kram"
+  = scrivito_details_for "Language of Site please use iso codes" do
+    = scrivito_tag :div, @obj, :iso_code_language
+  = scrivito_details_for "Comma seperated words describing the Page" do
+    = scrivito_tag :div, @obj, :meta_tags
+  = scrivito_details_for "Complete sentencens describing the Page" do
+    = scrivito_tag :div, @obj, :meta_description

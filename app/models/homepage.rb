@@ -4,6 +4,11 @@ class Homepage < Obj
   attribute :title, :string
   attribute :country, :enum, values: Obj.countries_based_on_flag_images
   attribute :country_name_translation, :string
+  attribute :iso_code_language, :string
+  attribute :meta_tags, :string
+  attribute :meta_description, :string
+
+
 
   #big_image
 

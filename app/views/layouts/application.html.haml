@@ -6,7 +6,8 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700", :rel => "stylesheet"}
     %link{:href => "https://fonts.googleapis.com/css?family=Arimo:400,400italic", :rel => "stylesheet"}
     %link{:href => "https://fonts.googleapis.com/css?family=Pacifico", :rel => "stylesheet"}
-    %title TransTech
+    = meta_tags_for(@obj)
+    %title= @obj.title || "Trans-Tech"
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'editing' if scrivito_user.present?

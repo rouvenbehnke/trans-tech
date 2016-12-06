@@ -1,0 +1,6 @@
+= scrivito_large_dialog do
+  = scrivito_details_for "Alternative Titel" do
+    = scrivito_tag :div, @obj, :alt
+  = scrivito_image_tag @obj, :blob
+  = scrivito_tag :div, @obj, :blob, class: 'image-replace-dropzone' do
+    Drop here to replace image
