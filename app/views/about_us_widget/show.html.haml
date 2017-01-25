@@ -1,6 +1,6 @@
 .team-wrap
   .team-align
-    = scrivito_image_tag widget, :image, class: "img-responsive"
+    = scrivito_image_tag widget, :image, {class: "img-responsive"}, transform: {width: 300}
     .text
       %h4.black
         = scrivito_tag(:div, widget, :name)
