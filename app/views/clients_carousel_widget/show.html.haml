@@ -2,4 +2,4 @@
   #clients-slider
     - widget.images.each do |image|
       .item
-        = link_to(image_tag(scrivito_path(image.obj), class: 'img-responsive'), image.title)
+        = link_to(image_tag(scrivito_path(image.obj.binary.transform(quality: 50)), class: 'img-responsive'), image.title)

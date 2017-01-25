@@ -12,6 +12,6 @@
 
 .quote-footer.text-right
   .quote-author-img
-    = scrivito_image_tag(widget, :image, {}, transform: {fit: :resize, quality: 35})
+    = scrivito_image_tag(widget, :image, {}, transform: {width: 200})
   = scrivito_tag(:h4, widget, :name)
   = scrivito_tag(:strong, widget, :job_title)
