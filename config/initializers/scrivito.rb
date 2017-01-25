@@ -7,7 +7,7 @@ Scrivito.configure do |config|
   end
 
   config.default_image_transformation = {
-    quality: 35
+    width: 2000, height: 2000
   }
   config.inject_preset_routes = false
 end
