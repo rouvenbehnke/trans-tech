@@ -8,6 +8,12 @@ class Homepage < Obj
   attribute :meta_tags, :string
   attribute :meta_description, :string
 
+  #mail
+
+  attribute :mail_not_sendable, :string, default: 'There was a problem sending your email. Please repeat or try again at a later time.'
+  attribute :mail_thanks_services, :string, default: 'Thank you for your interest in trans-tech. We will respond as soon as possible. Kind regards, Werner Behnke'
+  attribute :mail_thanks_for_working_with_us, :string, default: 'Thank you for your interest in our translation services. We will send you an offer as soon as possible. Kind regards, Werner Behnke'
+  
   # big_image
 
   attribute :button_1, :string, default: 'who_we_are'

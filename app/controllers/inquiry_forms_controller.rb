@@ -4,7 +4,7 @@ class InquiryFormsController < ApplicationController
   def create
     @form = InquiryForm.new(inquiry_params)
     mailer_selection(@form)
-    flash[:notice] = 'Thanks for your trust'
+    flash[:notice] = 'Your Inquiry was succesfully send. You will receive a confirmation via Email'
     redirect_to scrivito_path(Obj.find(params[:inquiry_form][:obj_id])) + anchor
   end
 

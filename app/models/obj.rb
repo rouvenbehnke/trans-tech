@@ -10,6 +10,11 @@ class Obj < Scrivito::BasicObj
     end
   end
 
+  def self.valid_page_classes_beneath(parent_path)
+    [Page]
+  end
+
+
   def self.flag_files
     Dir.glob("#{Rails.root}/app/assets/images/flags/*.png")
   end

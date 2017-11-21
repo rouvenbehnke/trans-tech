@@ -22,3 +22,12 @@
     = scrivito_tag :div, @obj, :meta_tags
   = scrivito_details_for "Complete sentencens describing the Page" do
     = scrivito_tag :div, @obj, :meta_description
+
+  %h3
+    = "Mail-Kram"
+  = scrivito_details_for "Mailer Text für nicht sendbare Inhalte" do
+    = scrivito_tag :div, @obj, :mail_not_sendable
+  = scrivito_details_for "Mailer Texte danke für ihre Anfrage bezüglich Zusammenarbeit" do
+    = scrivito_tag :div, @obj, :mail_thanks_services
+  = scrivito_details_for "Mailer Texte danke für ihre Anfrage bezüglich Übersetzungen-Services" do
+    = scrivito_tag :div, @obj, :mail_thanks_for_working_with_us
