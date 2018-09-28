@@ -22,11 +22,11 @@ class InquiryFormsController < ApplicationController
 
   def mailer_selection(form)
     if form.type == 'project_inquiry'
-      InquiryNotifier.project_inquiry(@form).deliver
-      InquiryNotifier.info_to_trans_tech_mail(@form).deliver
+      InquiryNotifier.project_inquiry(@form).deliver_now
+      InquiryNotifier.info_to_trans_tech_mail(@form).deliver_now
     else
-      InquiryNotifier.info_to_trans_tech_mail(@form).deliver
-      InquiryNotifier.work_with_us_inquiry(@form).deliver
+      InquiryNotifier.info_to_trans_tech_mail(@form).deliver_now
+      InquiryNotifier.work_with_us_inquiry(@form).deliver_now
     end
   end
 end
