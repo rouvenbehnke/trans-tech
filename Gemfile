@@ -16,7 +16,7 @@ gem 'font-awesome-rails'
 gem 'themify-icons-rails'
 gem 'flag_icon_css_rails'
 gem 'better_errors'
-gem 'pg'
+gem 'pg', '0.18.4'
 gem 'rails_12factor', group: :production
 gem 'scrivito'
 gem 'pry-rails'
