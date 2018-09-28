@@ -18,7 +18,7 @@ gem 'flag_icon_css_rails'
 gem 'better_errors'
 gem 'pg', '0.18.4'
 gem 'rails_12factor', group: :production
-gem 'scrivito'
+gem 'scrivito', '1.14.0'
 gem 'pry-rails'
 
 # Scrivito Gems
