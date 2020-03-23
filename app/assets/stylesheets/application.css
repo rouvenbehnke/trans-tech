@@ -13,7 +13,6 @@
  *= require_tree .
  *= require scrivito
  *= require font-awesome
- *= require themify-icons
  *= require flag_icon_css
  *= require scrivito_two_column_widget
  *= require_self

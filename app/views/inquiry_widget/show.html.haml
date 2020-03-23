@@ -17,40 +17,40 @@
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :first_name, class: "form-control", placeholder: widget.first_name, :type => "text", data: {"validation-required-message" => "Please enter your First Name"}
+              = f.text_field :first_name, class: "form-control", id: 'first_name_inquiry', placeholder: widget.first_name, :type => "text", :required => "true", data: {"validation-required-message" => "Please enter your First Name"}
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :last_name, class: "form-control", placeholder: widget.last_name, :type => "text", :required => "", data: {"validation-required-message" => "Please enter your Last Name."}
+              = f.text_field :last_name, class: "form-control", id: 'last_name_inquiry', placeholder: widget.last_name, :type => "text", :required => "true", data: {"validation-required-message" => "Please enter your Last Name."}
         .col-m-12
           .control-group
             .form-group.controls.form-padding
-              = f.email_field :email, class: "form-control", placeholder: widget.email, :required => "true", data: {"data-validation-required-message" => "Please enter your E-Mail Adress", :type => "email"}
+              = f.email_field :email, class: "form-control", id: 'last_email_inquiry',  placeholder: widget.email, :type => "email", :required => "true", data: {"data-validation-required-message" => "Please enter your E-Mail Adress"}
 
         .col-md-12.form-padding-no-left
           = scrivito_tag(:p, widget, :project_intel)
         .col-m-12
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :subject, class: "form-control", placeholder: widget.subject, data: {"data-validation-required-message" => "Please enter a subject", :required => "", :type => "text"}
+              = f.text_field :subject, class: "form-control", placeholder: widget.subject, :type => "text", :required => "true", data: {"data-validation-required-message" => "Please enter a subject"}
 
         .col-md-12.form-padding-no-left
           = scrivito_tag(:p, widget, :project_further_intel)
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.number_field :volume, class: "form-control", placeholder: widget.volume, data: {"data-validation-required-message" => "Please enter the volume", :required => "", :type => "number"}
+              = f.number_field :volume, class: "form-control", placeholder: widget.volume, :type => "number", :required => "true", data: {"data-validation-required-message" => "Please enter the volume"}
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.date_field :date, class: "form-control", placeholder: "Date Field", data: {"data-validation-required-message" => "Please enter the date for your request", :required => "", :type => "date"}
-              = f.hidden_field :obj_id, value: @obj.id
-              = f.hidden_field :type, value: "project_inquiry"
+              = f.date_field :date, class: "form-control", placeholder: "Date Field", :required => "true", :type => "date", data: {"data-validation-required-message" => "Please enter the date for your request"}
+              = f.hidden_field :obj_id, value: @obj.id, id: 'obj_id_inquiry'
+              = f.hidden_field :type, value: "project_inquiry", id: 'type_inquiry'
 
         .col-md-12.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_area :remarks, class: "form-control", placeholder: widget.remarks, data: {"data-validation-required-message" => "Please enter your specialist areas", :required => "", :type => "string"}
+              = f.text_area :remarks, class: "form-control", placeholder: widget.remarks, id: 'remarks_inquiry', data: {"data-validation-required-message" => "Please enter your specialist areas", :required => "", :type => "string"}
 
         .col-md-12.no-padding-col
           = f.submit "#{widget.send_button_text}", class: "btn btn-skin btn-lg", action: 'create', :type => 'submit'
@@ -60,22 +60,22 @@
   #tab-2.tab-pane
     .col-md-6.no-padding-col
       - form = InquiryForm.new
-      = form_for form do |f|
+      = form_for form, html: {id: 'work_for_us_form'} do |f|
         .col-md-12.form-padding-no-left
           = scrivito_tag(:p, widget, :user_details)
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :first_name, class: "form-control", placeholder: widget.first_name, data: {"data-validation-required-message" => "Please enter your First Name", :required => "true", :type => "text"}
+              = f.text_field :first_name, class: "form-control", placeholder: widget.first_name, :type => "text", :required => "true", data: {"data-validation-required-message" => "Please enter your First Name"}
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :last_name, class: "form-control", placeholder: widget.last_name, data: {"data-validation-required-message" => "Please enter your Last Name.", :required => "true", :type => "text"}
+              = f.text_field :last_name, class: "form-control", placeholder: widget.last_name, :required => "true", :type => "text", data: {"data-validation-required-message" => "Please enter your Last Name."}
 
         .col-m-12
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :email, class: "form-control", placeholder: widget.email, data: {"data-validation-required-message" => "Please enter your E-Mail Adress", :required => "true", :type => "email"}
+              = f.text_field :email, class: "form-control", placeholder: widget.email, :required => "true", :type => "email", data: {"data-validation-required-message" => "Please enter your E-Mail Adress"}
 
         .col-md-12.form-padding-no-left
           = scrivito_tag(:p, widget, :expertise)
@@ -83,21 +83,21 @@
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :source_language, class: "form-control", placeholder: widget.source_language, data: {"data-validation-required-message" => "Please enter the volume", :required => "", :type => "string"}
+              = f.text_field :source_language, class: "form-control", placeholder: widget.source_language, :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter the volume"}
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :target_language, class: "form-control", placeholder: widget.target_language, data: {"data-validation-required-message" => "Please enter your target language", :required => "", :type => "string"}
+              = f.text_field :target_language, class: "form-control", placeholder: widget.target_language,  :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter your target language"}
 
         .col-m-12
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :specialist_areas, class: "form-control", placeholder: widget.specialist_areas, data: {"data-validation-required-message" => "Please enter your specialist areas", :required => "", :type => "string"}
+              = f.text_field :specialist_areas, class: "form-control", placeholder: widget.specialist_areas, :required => "", :type => "string", data: {"data-validation-required-message" => "Please enter your specialist areas"}
 
         .col-m-12
           .control-group
             .form-group.controls.form-padding
-              = f.text_area :remarks, class: "form-control", placeholder: widget.remarks, data: {"data-validation-required-message" => "Please enter your specialist areas", :required => "", :type => "string"}
+              = f.text_area :remarks, class: "form-control", placeholder: widget.remarks,  :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter your specialist areas"}
               = f.hidden_field :obj_id, value: @obj.id
               = f.hidden_field :type, value: "work_with_usw"
 
