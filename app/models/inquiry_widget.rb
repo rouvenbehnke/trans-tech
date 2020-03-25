@@ -4,6 +4,8 @@ class InquiryWidget < Widget
   attribute :work_for_us_text, :html
   attribute :work_for_us_button_text, :string
   attribute :send_button_text, :string
+  attribute :attachment_button_text_offer, :string
+  attribute :attachment_button_text_career, :string
 
   attribute :project_intel, :string
   attribute :project_further_intel, :string

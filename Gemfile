@@ -20,6 +20,7 @@ gem 'pg', '0.18.4'
 gem 'rails_12factor', group: :production
 gem 'scrivito', '1.14.0'
 gem 'pry-rails'
+gem 'binding_of_caller'
 
 # Scrivito Gems
 gem 'scrivito_two_column_widget'

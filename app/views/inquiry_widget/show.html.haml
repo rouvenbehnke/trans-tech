@@ -51,6 +51,13 @@
           .control-group
             .form-group.controls.form-padding
               = f.text_area :remarks, class: "form-control", placeholder: widget.remarks, id: 'remarks_inquiry', data: {"data-validation-required-message" => "Please enter your specialist areas", :required => "", :type => "string"}
+              
+        .col-m-12
+          .control-group
+            %span= widget.attachment_button_text_offer
+            .form-group.controls.form-padding
+              %label.btn.btn-primary{:for => "my-file-selector"}
+                = f.file_field :attachment_offer, id: 'my-file-selector', multiple: true, class: 'd-none', accept: 'image/jpg, image/jpeg, application/pdf, application/zip,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 
         .col-md-12.no-padding-col
           = f.submit "#{widget.send_button_text}", class: "btn btn-skin btn-lg", action: 'create', :type => 'submit'
@@ -100,6 +107,13 @@
               = f.text_area :remarks, class: "form-control", placeholder: widget.remarks,  :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter your specialist areas"}
               = f.hidden_field :obj_id, value: @obj.id
               = f.hidden_field :type, value: "work_with_usw"
+        .col-m-12
+          .control-group
+            %span= widget.attachment_button_text_career
+            .form-group.controls.form-padding
+              %label.btn.btn-primary{:for => "my-file-selector"}
+                = f.file_field :attachment_career, id: 'my-file-selector', multiple: true, class: 'd-none', accept: 'image/jpg, image/jpeg, application/pdf, application/zip,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+
 
         #success
           .col-md-12.form-padding-no-left
