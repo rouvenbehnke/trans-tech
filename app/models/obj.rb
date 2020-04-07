@@ -22,7 +22,7 @@ class Obj < Scrivito::BasicObj
   def homepage
     @homepage ||= ancestors.detect do |ancestor|
       ancestor.is_a?(Homepage)
-    end.presence ||  Homepage.default  
+    end.presence || Homepage.default
   end
 
   def slug
