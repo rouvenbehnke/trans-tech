@@ -6,25 +6,35 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#home"} Trans-Tech
+      %a.navbar-brand{:href => scrivito_url(obj)} Trans-Tech
     .navbar-collapse.collapse{:style => "max-height: 910px;"}
       %ul.nav.navbar-nav.navbar-right
         -# %li
         -#   %a{href: "#home"}
         -#     Home
-        - @obj.nav_based_on_widgets.each do |section|
-          %li
-            - if @obj.is_a?(Homepage)
-              = link_to(section.section_name.humanize, "#" + section.section_name)
-            - if @obj.is_a?(Page)
-              = link_to(section.section_name.humanize, "#{scrivito_path(@obj.parent)}##{section.section_name}")
+        - if self.class != Homepage
+          - obj.nav_based_on_widgets.each do |section|
+            %li
+              - if obj.is_a?(Homepage)
+                = link_to(section.section_name.humanize, scrivito_url(obj) + "##{section.section_name}")
+              - if obj.is_a?(Page)
+                = link_to(section.section_name.humanize, "#{scrivito_path(obj.parent)}##{section.section_name}")
+
+        - else 
+          - obj.nav_based_on_widgets.each do |section|
+            %li
+              - if obj.is_a?(Homepage)
+                = link_to(section.section_name.humanize, "#" + section.section_name)
+              - if obj.is_a?(Page)
+                = link_to(section.section_name.humanize, "#{scrivito_path(obj.parent)}##{section.section_name}")
 
         %li.dropdown.active
           %a.dropdown-toggle.js-activated{"aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Language
+
+            = obj.menu_language
             %span.caret
           %ul.dropdown-menu
-            - @obj.homepages.each do |homepage|
+            - obj.homepages.each do |homepage|
               %li
                 %a{:href => scrivito_path(homepage)}
                   = image_tag asset_path("flags/" + homepage.country + ".png"), class: "flag-icon"

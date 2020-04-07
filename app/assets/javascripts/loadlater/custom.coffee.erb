@@ -31,7 +31,7 @@ $(document).ready ->
     return
   #smooth scroll
   $ ->
-    $('.scroll-to a[href*=#]:not([href=#])').click ->
+    $('.scroll-to a[href*=\\#]:not([href=\\#])').click ->
       if location.pathname.replace(/^\//, '') == @pathname.replace(/^\//, '') and location.hostname == @hostname
         target = $(@hash)
         target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
@@ -77,3 +77,15 @@ $(document).ready ->
     delay: 10
     time: 5000
   return
+  $ ->
+    debugger
+    $('#acceptedCookies').on 'click', (event) ->
+      event.preventDefault()
+
+      element = $(event.currentTarget)
+      destination = element.data('destination')
+      id = {id: element.data('id')}
+
+      $.get(destination, id).success ->
+        element.closest('.cookie-notice').hide()
+

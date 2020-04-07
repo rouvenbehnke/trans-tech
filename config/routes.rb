@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resource :session, only: [:create, :destroy]
 
   get '/login' => "login_page#redirect"
+  get '/accepted_cookies_hint' => 'accepted_cookies_hint#index', as: :accepted_cookies_hint
+
 
   resources :inquiry_forms, only: [:create]
 

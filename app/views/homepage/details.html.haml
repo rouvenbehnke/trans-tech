@@ -13,6 +13,17 @@
     = scrivito_tag :div, @obj, :button_2
   = scrivito_details_for "Third Button of Introduction Image" do
     = scrivito_tag :div, @obj, :button_3
+  = scrivito_details_for "Translation of 'language in menu'" do
+    = scrivito_tag :div, @obj, :menu_language
+  
+  %h3
+    = "Cookie-Banner"
+  = scrivito_details_for 'Cookie Notice' do
+    = scrivito_tag :div, @obj, :cookie_notice, data: {scrivito_editors_placeholder: t('.cookie_notice_placeholder')}
+  = scrivito_details_for 'Cookie Notice Link' do
+    = scrivito_tag :div, @obj, :cookie_notice_link
+  = scrivito_details_for 'Cookie Notice Button Text' do
+    = scrivito_tag :div, @obj, :cookie_notice_button_text
 
   %h3
     = "Seo-Kram"

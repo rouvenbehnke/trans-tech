@@ -1329,3 +1329,39 @@ a.anchor {
     top: -60px;
     visibility: hidden;
 }
+
+.cookie-notice {
+  position: fixed;
+  bottom: 0;
+  z-index: 100000000;
+  background-color: grey;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+
+  div {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  a {
+    color: white;
+    margin-left: 15px;
+  }
+  
+  a:hover {
+    color: white;
+  }
+  a:before {
+    margin-right: 4px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f061";
+  }
+
+  .btn {
+    margin: 0px;
+  }
+}
+

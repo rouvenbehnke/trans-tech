@@ -15,7 +15,9 @@
     = scrivito_head_tags
 
   %body
+    = render 'partials/cookie_notice', obj: @obj.homepage unless cookie_hint_accepted?(@obj.homepage)
+
     - unless @root_page == true || @obj.class == LoginPage
-      = render 'layouts/navigation'
+      = render 'layouts/navigation', obj: @obj.homepage
     = yield
     = scrivito_body_tags

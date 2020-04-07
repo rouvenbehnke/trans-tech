@@ -7,8 +7,11 @@ class Homepage < Obj
   attribute :iso_code_language, :string
   attribute :meta_tags, :string
   attribute :meta_description, :string
+  attribute :cookie_notice, :string
+  attribute :cookie_notice_link, :link
+  attribute :cookie_notice_button_text, :string
 
-  #mail
+  # mail
 
   attribute :mail_not_sendable, :string, default: 'There was a problem sending your email. Please repeat or try again at a later time.'
   attribute :mail_thanks_services, :string, default: 'Thank you for your interest in trans-tech. We will respond as soon as possible. Kind regards, Werner Behnke'
@@ -26,6 +29,7 @@ class Homepage < Obj
   attribute :button_text_offer, :string
   attribute :button_text_work_with, :string
   attribute :slider_image, :reference
+  attribute :menu_language, :string
 
   # footer
   attribute :contact_us_text, :string, default: 'Contact Us'
@@ -58,9 +62,7 @@ class Homepage < Obj
   end
 
   def homepage
-    @homepage ||= ancestors.detect do |ancestor|
-      ancestor.is_a?(Homepage)
-    end.presence ||  Homepage.default
+    self
   end
 
   def nav_based_on_widgets

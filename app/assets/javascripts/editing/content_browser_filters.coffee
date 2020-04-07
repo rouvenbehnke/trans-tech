@@ -7,3 +7,5 @@ scrivito.content_browser.filters =
         value: 'Image'
       pdfs:
         value: 'Download'
+      seiten:
+        value: 'Page'
