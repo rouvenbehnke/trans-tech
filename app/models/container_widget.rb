@@ -2,6 +2,7 @@ class ContainerWidget < Widget
   attribute :widgets, :widgetlist
   attribute :color, :enum, values: ["white", "grey", "very_light", "light", "dark", "very dark"], default: "grey"
   attribute :section_name, :string
+  attribute :title, :string
   attribute :include_in_nav, :enum, values: ["ja", "nein"], default: "ja"
 
   def description_for_editor
@@ -29,6 +30,10 @@ class ContainerWidget < Widget
 
   def section_name
     self[:section_name].presence || "missing section name"
+  end
+
+  def section_title 
+    self[:title].presence || "missing section title"
   end
 
 end

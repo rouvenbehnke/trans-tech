@@ -1,8 +1,4 @@
-%h2= 'Contact Form Submission'
-=======================
-
-%h3= 'Thank you for your Form submission on Trans-tech.de'
-%h4= 'You provided the following information:'
+= @homepage.mail_thanks_for_working_with_us
 
 %p="First Name = #{@inquiry.first_name}"
 %p="Last Name = #{@inquiry.last_name}"
@@ -12,6 +8,4 @@
 %p="Volume = #{@inquiry.first_name}"
 %p="Date = #{@inquiry.date}"
 
-%p= 'We will respond to your inquiry as quick as possible.'
-
-%p= 'Best Regards, trans-tech Team.'
+= @homepage.mail_thanks_for_working_with_us_end

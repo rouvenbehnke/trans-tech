@@ -52,6 +52,10 @@ class OurServicesWidget < Widget
   end
 
   def section_name
-    self[:title].presence || "missing section name"
+    self[:section_name].presence || "missing section name"
+  end
+
+  def section_title 
+    self[:title].presence || "missing section title"
   end
 end

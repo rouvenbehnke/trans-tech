@@ -1,21 +1,25 @@
 class InquiryNotifier < ApplicationMailer
   default from: 'info@trans-tech.de'
 
-  def project_inquiry(inquiry, new_attachments)
+  def project_inquiry(inquiry, new_attachments, homepage)
+    @homepage = homepage
     @inquiry = inquiry
     create_attachments(new_attachments)
     mail(to: @inquiry.email,
          subject: 'Your Inquiry for translation services.')
   end
 
-  def work_with_us_inquiry(inquiry, new_attachments)
+  def work_with_us_inquiry(inquiry, new_attachments, homepage)
+    @homepage = homepage
+    
     @inquiry = inquiry
     create_attachments(new_attachments)
     mail(to: @inquiry.email,
          subject: 'Your Inquiry for Working with Trans-Tech')
   end
 
-  def info_to_trans_tech_mail(inquiry, new_attachments)
+  def info_to_trans_tech_mail(inquiry, new_attachments, homepage)
+    @homepage = homepage
     @inquiry = inquiry
     create_attachments(new_attachments)
     mail(to: 'wbehnke@trans-tech.de',

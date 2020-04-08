@@ -3,7 +3,7 @@ class InquiryFormsController < ApplicationController
 
   def create
     @form = InquiryForm.new(inquiry_params)
-    mailer_selection(@form,  attachments_check(params))
+    mailer_selection(@form,  attachments_check(params), Obj.find(inquiry_params['obj_id']))
     flash[:notice] = 'Your Inquiry was succesfully send. You will receive a confirmation via Email'
     redirect_to scrivito_path(Obj.find(params[:inquiry_form][:obj_id])) + anchor
   end
@@ -27,13 +27,13 @@ class InquiryFormsController < ApplicationController
     attachments.flatten.compact
   end
 
-  def mailer_selection(form, attachments)
+  def mailer_selection(form, attachments, obj)
     if form.type == 'project_inquiry'
-      InquiryNotifier.project_inquiry(@form, attachments).deliver_now
-      InquiryNotifier.info_to_trans_tech_mail(@form, attachments).deliver_now
+      InquiryNotifier.project_inquiry(@form, attachments, obj.homepage).deliver_now
+      InquiryNotifier.info_to_trans_tech_mail(@form, attachments, obj.homepage).deliver_now
     else
-      InquiryNotifier.info_to_trans_tech_mail(@form, attachments).deliver_now
-      InquiryNotifier.work_with_us_inquiry(@form, attachments).deliver_now
+      InquiryNotifier.info_to_trans_tech_mail(@form, attachments, obj.homepage).deliver_now
+      InquiryNotifier.work_with_us_inquiry(@form, attachments, obj.homepage).deliver_now
     end
   end
 end

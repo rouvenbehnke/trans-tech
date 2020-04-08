@@ -16,17 +16,17 @@
           - obj.nav_based_on_widgets.each do |section|
             %li
               - if obj.is_a?(Homepage)
-                = link_to(section.section_name.humanize, scrivito_url(obj) + "##{section.section_name}")
+                = link_to(section.section_title.humanize, scrivito_url(obj) + "##{section.section_title}")
               - if obj.is_a?(Page)
-                = link_to(section.section_name.humanize, "#{scrivito_path(obj.parent)}##{section.section_name}")
+                = link_to(section.section_title.humanize, "#{scrivito_path(obj.parent)}##{section.section_title}")
 
         - else 
           - obj.nav_based_on_widgets.each do |section|
             %li
               - if obj.is_a?(Homepage)
-                = link_to(section.section_name.humanize, "#" + section.section_name)
+                = link_to(section.section_title.humanize, "#" + section.section_title)
               - if obj.is_a?(Page)
-                = link_to(section.section_name.humanize, "#{scrivito_path(obj.parent)}##{section.section_name}")
+                = link_to(section.section_title.humanize, "#{scrivito_path(obj.parent)}##{section.section_title}")
 
         %li.dropdown.active
           %a.dropdown-toggle.js-activated{"aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}

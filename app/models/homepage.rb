@@ -13,10 +13,10 @@ class Homepage < Obj
 
   # mail
 
-  attribute :mail_not_sendable, :string, default: 'There was a problem sending your email. Please repeat or try again at a later time.'
-  attribute :mail_thanks_services, :string, default: 'Thank you for your interest in trans-tech. We will respond as soon as possible. Kind regards, Werner Behnke'
-  attribute :mail_thanks_for_working_with_us, :string, default: 'Thank you for your interest in our translation services. We will send you an offer as soon as possible. Kind regards, Werner Behnke'
-  
+  attribute :mail_thanks_services_beginning, :html
+  attribute :mail_thanks_services_end, :html
+  attribute :mail_thanks_for_working_with_us, :html
+  attribute :mail_thanks_for_working_with_us_end, :html
   # big_image
 
   attribute :button_1, :string, default: 'who_we_are'
@@ -40,6 +40,7 @@ class Homepage < Obj
   attribute :more_sites, :string, default: 'More sites'
   attribute :adress, :string, default: '12205, Berlin, Carstennstraße.43b'
   attribute :number, :string, default: 'More sites'
+  attribute :copy_righty_text, :string
 
   def self.default
     Homepage.all.first
