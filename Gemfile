@@ -21,6 +21,8 @@ gem 'rails_12factor', group: :production
 gem 'scrivito', '1.14.0'
 gem 'pry-rails'
 gem 'binding_of_caller'
+gem 'airbrake-ruby'
+
 
 # Scrivito Gems
 gem 'scrivito_two_column_widget'

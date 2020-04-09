@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    airbrake-ruby (4.13.4)
+      rbtree3 (~> 0.5)
     arel (8.0.0)
     better_errors (2.6.0)
       coderay (>= 1.0.0)
@@ -160,6 +162,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rbtree3 (0.6.0)
     rdoc (4.3.0)
     ruby_parser (3.14.2)
       sexp_processor (~> 4.9)
@@ -238,6 +241,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake-ruby
   better_errors
   binding_of_caller
   byebug
