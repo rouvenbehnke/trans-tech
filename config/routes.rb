@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/login' => "login_page#redirect"
   get '/accepted_cookies_hint' => 'accepted_cookies_hint#index', as: :accepted_cookies_hint
+  get '/deu/*bla', to: redirect('/', status: 301)
+
 
 
   resources :inquiry_forms, only: [:create]
