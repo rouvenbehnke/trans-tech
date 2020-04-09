@@ -3,9 +3,12 @@
 %p="First Name = #{@inquiry.first_name}"
 %p="Last Name = #{@inquiry.last_name}"
 %p="Email = #{@inquiry.email}"
-%p="Remarks = #{@inquiry.remarks}"
 %p="Subject = #{@inquiry.subject}"
-%p="Volume = #{@inquiry.first_name}"
+%p="Source Language(s) = #{@inquiry.source_language}"
+%p="Target Language(s) = #{@inquiry.target_language}"
+%p="Specialist Area(s) = #{@inquiry.specialist_areas}"
+%p="Volume = #{@inquiry.volume}"
 %p="Date = #{@inquiry.date}"
+%p="Remarks = #{@inquiry.remarks}"
 
 = @homepage.mail_thanks_for_working_with_us_end

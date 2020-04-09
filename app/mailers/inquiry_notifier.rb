@@ -11,19 +11,20 @@ class InquiryNotifier < ApplicationMailer
 
   def work_with_us_inquiry(inquiry, new_attachments, homepage)
     @homepage = homepage
-    
+
     @inquiry = inquiry
     create_attachments(new_attachments)
     mail(to: @inquiry.email,
-         subject: 'Your Inquiry for Working with Trans-Tech')
+         subject: 'Your Inquiry for Working with trans-tech')
   end
 
-  def info_to_trans_tech_mail(inquiry, new_attachments, homepage)
+  def info_to_trans_tech_mail(inquiry, new_attachments, homepage, type)
     @homepage = homepage
     @inquiry = inquiry
+    @type = type
     create_attachments(new_attachments)
     mail(to: 'wbehnke@trans-tech.de',
-         subject: 'Neue Anfrage von der neuen(!) Trans-Tech Website erhalten.')
+         subject: 'Neue Anfrage von trans-tech.de ')
   end
 
   def create_attachments(new_attachments)

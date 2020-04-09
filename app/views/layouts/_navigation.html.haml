@@ -28,8 +28,8 @@
               - if obj.is_a?(Page)
                 = link_to(section.section_title.humanize, "#{scrivito_path(obj.parent)}##{section.section_name}")
 
-        %li.dropdown.active
-          %a.dropdown-toggle.js-activated{"aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
 
             = obj.menu_language
             %span.caret

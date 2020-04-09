@@ -30,9 +30,9 @@ class InquiryFormsController < ApplicationController
   def mailer_selection(form, attachments, obj)
     if form.type == 'project_inquiry'
       InquiryNotifier.project_inquiry(@form, attachments, obj.homepage).deliver_now
-      InquiryNotifier.info_to_trans_tech_mail(@form, attachments, obj.homepage).deliver_now
+      InquiryNotifier.info_to_trans_tech_mail(@form, attachments, obj.homepage, form.type).deliver_now
     else
-      InquiryNotifier.info_to_trans_tech_mail(@form, attachments, obj.homepage).deliver_now
+      InquiryNotifier.info_to_trans_tech_mail(@form, attachments, obj.homepage, form.type).deliver_now
       InquiryNotifier.work_with_us_inquiry(@form, attachments, obj.homepage).deliver_now
     end
   end

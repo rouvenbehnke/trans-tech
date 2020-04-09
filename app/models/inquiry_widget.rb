@@ -23,7 +23,8 @@ class InquiryWidget < Widget
   attribute :source_language, :string, default: 'Source Language'
   attribute :target_language, :string, default: 'Target Language'
   attribute :specialist_areas, :string, default: 'Specialist Areas'
-  attribute :remarks, :string, default: 'Further Information'
+  attribute :remarks_inquiry, :string, default: 'Further Information'
+  attribute :remarks_work_for_us, :string, default: 'Further Information'
 
   def description_for_editor
     'Inquiry Widget'

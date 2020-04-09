@@ -3,15 +3,6 @@ $(document).ready ->
   #parallax
   #Auto Close Responsive Navbar on Click
 
-  close_toggle = ->
-    if $(window).width() <= 768
-      $('.navbar-collapse a').on 'click', ->
-        $('.navbar-collapse').collapse 'hide'
-        return
-    else
-      $('.navbar .navbar-default a').off 'click'
-    return
-
   if !Modernizr.touch
     $('.home-newsletter').parallax '50%', 0.5
     $('.home-contact').parallax '50%', 0.5
@@ -40,9 +31,6 @@ $(document).ready ->
           return false
       return
     return
-  close_toggle()
-  $(window).resize close_toggle
-  #Newsletter
   # Checking subcribe form when focus event
   $('.assan-newsletter input[type="text"], .assan-newsletter input[type="email"]').live 'focus keypress', ->
     $email = $(this)
@@ -78,7 +66,6 @@ $(document).ready ->
     time: 5000
   return
   $ ->
-    debugger
     $('#acceptedCookies').on 'click', (event) ->
       event.preventDefault()
 

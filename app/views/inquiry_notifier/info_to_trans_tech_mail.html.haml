@@ -1,12 +1,27 @@
-%h4= "Contact Form Submission"
+%h4= "Kontakt Formular Zusammenfassung "
 =======================
 
-%h3= "The Trans-Tech.de form was submitted with the following details."
+%h3= "Das trans-tech.de Formular wurde mit den folgenden Daten abgeschickt:"
 
-%p="First Name = #{@inquiry.first_name}"
-%p="Last Name = #{@inquiry.last_name}"
-%p="Email = #{@inquiry.email}"
-%p="Remarks = #{@inquiry.remarks}"
-%p="Subject = #{@inquiry.subject}"
-%p="Volume = #{@inquiry.first_name}"
-%p="Date = #{@inquiry.date}"
+%h3= "Sprache der Website in welcher ausgefüllt wurde = #{@homepage.iso_code_language}"
+
+- if @type == 'project_inquiry'
+  %h3= "Anfragen-Typ: Projekt-Anfrage"
+  %p="Vorname = #{@inquiry.first_name}"
+  %p="Nachname = #{@inquiry.last_name}"
+  %p="Email = #{@inquiry.email}"
+  %p="Thema = #{@inquiry.subject}"
+  %p="Quellsprache(n) = #{@inquiry.source_language}"
+  %p="Zielsprache(n) = #{@inquiry.target_language}"
+  %p="Volumen = #{@inquiry.volume}"
+  %p="Fertigstellungsdatum = #{@inquiry.date}"
+  %p="Weitere Anmerkungen = #{@inquiry.remarks}"
+- else 
+  %h3= "Anfragen-Typ: Mitarbeits-Anfrage"
+  %p="Vorname = #{@inquiry.first_name}"
+  %p="Nachname = #{@inquiry.last_name}"
+  %p="Email = #{@inquiry.email}"
+  %p="Quellsprache(n) = #{@inquiry.source_language}"
+  %p="Zielsprache(n) = #{@inquiry.target_language}"
+  %p="Spezialgebiet(e) = #{@inquiry.specialist_areas}"
+  %p="Weitere Anmerkungen = #{@inquiry.remarks}"
