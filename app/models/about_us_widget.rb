@@ -7,7 +7,7 @@ class AboutUsWidget < Widget
   attribute :mail, :string
   attribute :fax, :string
   attribute :phone, :string
-
+  attribute :alt, :string
 
   def description_for_editor
     "About Us Widget"

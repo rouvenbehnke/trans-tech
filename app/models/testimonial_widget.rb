@@ -6,6 +6,7 @@ class TestimonialWidget < Widget
   attribute :color, :enum, values: ["very_light", "light", "dark", "dark"]
   attribute :pdf, :reference
   attribute :pdf_link_title, :string
+  attribute :alt, :string
 
   def color
     case self[:color]
