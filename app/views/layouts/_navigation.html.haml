@@ -9,9 +9,6 @@
       %a.navbar-brand{:href => scrivito_url(obj)} Trans-Tech
     .navbar-collapse.collapse{:style => "max-height: 910px;"}
       %ul.nav.navbar-nav.navbar-right
-        -# %li
-        -#   %a{href: "#home"}
-        -#     Home
         - if self.class != Homepage
           - obj.nav_based_on_widgets.each do |section|
             %li

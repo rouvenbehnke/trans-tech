@@ -36,7 +36,7 @@
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :source_language, class: "form-control", placeholder: widget.source_language, :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter the volume"}
+              = f.text_field :source_language, class: "form-control", id: 'source_language_project', placeholder: widget.source_language, :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter the volume"}
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
@@ -98,7 +98,7 @@
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
-              = f.text_field :source_language, class: "form-control", placeholder: widget.source_language, :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter the volume"}
+              = f.text_field :source_language, class: "form-control", placeholder: widget.source_language, id: 'source_language_work_with_us', :required => "true", :type => "string", data: {"data-validation-required-message" => "Please enter the volume"}
         .col-md-6.no-padding-col
           .control-group
             .form-group.controls.form-padding
