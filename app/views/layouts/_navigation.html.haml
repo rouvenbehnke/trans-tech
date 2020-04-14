@@ -37,6 +37,6 @@
             - obj.homepages.each do |homepage|
               %li
                 %a{:href => scrivito_path(homepage)}
-                  = image_tag asset_path("flags/" + homepage.country + ".png"), class: "flag-icon"
+                  = image_tag asset_path("flags/" + homepage.country + ".png"), class: "flag-icon", loading: 'lazy'
                   -# = image_tag image_path("flags/" + homepage.country), class: "flag-icon"
                   = homepage.country_name_translation

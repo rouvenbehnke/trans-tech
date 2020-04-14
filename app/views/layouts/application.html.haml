@@ -3,9 +3,6 @@
   %head
     %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
     %meta{name: 'viewport', content:'width=device-width, initial-scale=1.0'}
-    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700", :rel => "stylesheet"}
-    %link{:href => "https://fonts.googleapis.com/css?family=Arimo:400,400italic", :rel => "stylesheet"}
-    %link{:href => "https://fonts.googleapis.com/css?family=Pacifico", :rel => "stylesheet"}
     = meta_tags_for(@obj)
     %title= "trans-tech - translations technical "
     = stylesheet_link_tag    'application', media: 'all'
@@ -21,3 +18,6 @@
       = render 'layouts/navigation', obj: @obj.homepage
     = yield
     = scrivito_body_tags
+  %footer
+    = render 'partials/footer'
+    
