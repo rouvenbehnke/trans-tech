@@ -7,7 +7,7 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Arimo:400,400italic", :rel => "stylesheet"}
     %link{:href => "https://fonts.googleapis.com/css?family=Pacifico", :rel => "stylesheet"}
     = meta_tags_for(@obj)
-    %title= @obj.title || "Trans-Tech"
+    %title= "trans-tech - translations technical "
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'editing' if scrivito_user.present?
