@@ -1,8 +1,7 @@
 .cookie-notice
   = scrivito_tag :i, obj, :cookie_notice
   - if obj.cookie_notice_link.present?
-    -# = fa_icon "arrow-right", {title: 'More Infos for Cookie-Policy'},
-    = link_to obj.cookie_notice_link.title, scrivito_path(obj.cookie_notice_link)
+    = link_to obj.cookie_notice_link.title, scrivito_path(obj.cookie_notice_link), class: 'cookie-link'
 
   .btn.btn-default.green-button#acceptedCookies{data: { destination: accepted_cookies_hint_path, id: obj.id}}
     = obj.cookie_notice_button_text
