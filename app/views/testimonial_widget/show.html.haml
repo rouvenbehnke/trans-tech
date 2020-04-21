@@ -3,8 +3,9 @@
     %blockquote
       .pdf-present
         = scrivito_tag(:p, widget, :content)
-        = link_to scrivito_path(widget.pdf) do
-          .ti-save.testimonial-icon
+    = link_to scrivito_path(widget.pdf) do
+      .ti-save.testimonial-icon
+        =raw('&#x1F4BE')
   - else
     %blockquote
       = scrivito_tag(:p, widget, :content)

@@ -22,6 +22,7 @@ gem 'scrivito', '1.14.0'
 gem 'pry-rails'
 gem 'binding_of_caller'
 gem 'airbrake-ruby'
+gem 'jquery-rails'
 
 
 # Scrivito Gems

@@ -252,6 +252,7 @@ DEPENDENCIES
   haml-rails
   heroku-deflater
   jbuilder (~> 2.0)
+  jquery-rails
   pg (= 0.18.4)
   pry-rails
   rails (~> 5.1)
