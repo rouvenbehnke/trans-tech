@@ -17,6 +17,8 @@ class Homepage < Obj
   attribute :mail_thanks_services_end, :html
   attribute :mail_thanks_for_working_with_us, :html
   attribute :mail_thanks_for_working_with_us_end, :html
+  attribute :mailer_success, :string
+
   # big_image
 
   attribute :button_1, :string, default: 'who_we_are'

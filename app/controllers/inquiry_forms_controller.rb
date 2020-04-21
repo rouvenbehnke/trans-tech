@@ -3,8 +3,9 @@ class InquiryFormsController < ApplicationController
 
   def create
     @form = InquiryForm.new(inquiry_params)
-    mailer_selection(@form,  attachments_check(params), Obj.find(inquiry_params['obj_id']))
-    flash[:notice] = 'Your Inquiry was succesfully send. You will receive a confirmation via Email'
+    @obj = Obj.find(inquiry_params['obj_id'])
+    # mailer_selection(@form,  attachments_check(params), @obj)
+    flash[:notice] = @obj.mailer_success
     redirect_to scrivito_path(Obj.find(params[:inquiry_form][:obj_id])) + anchor
   end
 
@@ -16,7 +17,7 @@ class InquiryFormsController < ApplicationController
     params.require(:inquiry_form).permit(
       :first_name, :last_name, :email, :subject,
       :volume, :date, :obj_id, :source_language,
-      :target_language, :specialist_areas, :remarks,
+      :target_language, :specialist_areas, :remarks, :type
     )
   end
 

@@ -1,5 +1,5 @@
 - if flash[:notice]
-  %p{:style => "color: green;"}= flash[:notice]
+  %h2{:style => "color: green;"}= flash[:notice]
 .tabs-container
   = scrivito_tag(:p, widget, :request_type)
   %ul.nav.nav-tabs
@@ -9,7 +9,10 @@
       %a#work-for-us-button{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab-2"} #{widget.work_for_us_button_text}
 .tab-content
   #tab-1.tab-pane
-    .col-md-6.no-padding-col
+    .col-md-6.col-md-push-6
+      = scrivito_tag(:p, widget, :inquiry_text)
+
+    .col-md-6.no-padding-col.col-md-pull-6
       - form = InquiryForm.new
       = form_for form do |f|
         .col-md-12.form-padding-no-left
@@ -70,10 +73,11 @@
         .col-md-12.no-padding-col
           = f.submit "#{widget.send_button_text}", class: "btn btn-skin btn-lg", action: 'create', :type => 'submit'
 
-    .col-md-6
-      = scrivito_tag(:p, widget, :inquiry_text)
   #tab-2.tab-pane
-    .col-md-6.no-padding-col
+    .col-md-6.col-md-push-6
+      = scrivito_tag(:p, widget, :inquiry_text)
+
+    .col-md-6.no-padding-col.col-md-6.col-md-pull-6
       - form = InquiryForm.new
       = form_for form, html: {id: 'work_for_us_form'} do |f|
         .col-md-12.form-padding-no-left
@@ -126,6 +130,3 @@
         #success
           .col-md-12.form-padding-no-left
             = f.submit "#{widget.send_button_text}", class: "btn btn-skin btn-lg"
-
-    .col-md-6
-      = scrivito_tag(:p, widget, :work_for_us_text)
