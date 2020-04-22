@@ -4,7 +4,7 @@ class InquiryFormsController < ApplicationController
   def create
     @form = InquiryForm.new(inquiry_params)
     @obj = Obj.find(inquiry_params['obj_id'])
-    # mailer_selection(@form,  attachments_check(params), @obj)
+    mailer_selection(@form,  attachments_check(params), @obj)
     flash[:notice] = @obj.mailer_success
     redirect_to scrivito_path(Obj.find(params[:inquiry_form][:obj_id])) + anchor
   end
