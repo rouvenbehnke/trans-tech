@@ -1,14 +1,8 @@
 class RootPageController < CmsController
-  before_action :redirect_to_language
+  #before_action :redirect_to_language
 
   def index
-    @root_page = true
-    @homepages = Homepage.all.to_a
-
-    if request.post?
-      redirect_to scrivito_path Obj.find(params[:homepage])
-    end
-
+    redirect_to scrivito_path(Homepage.default)
   end
 
   def redirect_to_language
