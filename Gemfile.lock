@@ -120,7 +120,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    pg (0.18.4)
+    pg (1.4.4)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -253,7 +253,7 @@ DEPENDENCIES
   heroku-deflater
   jbuilder (~> 2.0)
   jquery-rails
-  pg (= 0.18.4)
+  pg (= 1.4.4)
   pry-rails
   rails (~> 5.1)
   rails_12factor
